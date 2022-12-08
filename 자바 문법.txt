@@ -23,6 +23,7 @@ ArrayBlockingQueue
 	
 StringBuffer
 	동기화 키워드를 지원하며, 멀티쓰레드 환경에서 안전하다.
+	setCharAt(n, 'c'); n위치 데이터를 c로 수정
 	
 StringBuilder
 	동기화를 지원하지 않기 때문에 멀티쓰레드 환경에서 사용하는 것은 적합하지 않지만, 단일쓰레드에서의 성능은 StringBuffer보다 더 좋다.

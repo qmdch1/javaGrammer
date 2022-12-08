@@ -1,0 +1,7 @@
+origin
+	git push origin --delete <branchName> == 원격 branch 삭제
+
+branch 
+	git branch == branch 조회
+	git branch -f <branchName> HEAD == branch를 HEAD로 강제로 이동시킨다.
+	git branch -d <branchName> == branch 삭제하기

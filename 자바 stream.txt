@@ -1,0 +1,49 @@
+Stream - 객체집합.스트림생성().중개연산().최종연산()
+
+예시
+(int) Arrays.stream(String.valueOf(order).split("")).map(Integer::parseInt).filter(i -> i == 3 || i == 6 || i == 9).count();
+myString.chars().mapToObj(operand -> String.valueOf((char) (Character.isLowerCase(operand) ? Character.toUpperCase(operand) : Character.toLowerCase(operand)))).collect(Collectors.joining());
+Arrays.stream(myString.split("")).collect(Collectors.toList());
+Arrays.stream(numList).filter(value -> value % n == 0).toArray();
+Arrays.stream(s1).collect(Collectors.toList());
+Arrays.stream(s.split(""))
+		.collect(Collectors.groupingBy(s1 -> s1))
+		.entrySet()
+		.stream()
+		.filter(entry -> entry.getValue().size() <= 1)
+		.map(Map.Entry::getKey)
+		.sorted()
+		.collect(Collectors.joining());
+
+	orElse(0) 리턴값이 없는경우 0을리턴
+	mapToInt(i -> i); inputstream
+	s.chars(); 문자열로 수정하기
+	
+	중개연산()
+	1. 스트림 필터링 : filter(), distinct() - 걸러내기, 중복제거
+		filter(s -> s.startsWith("c"));
+		filter("c"::equlas);
+	2. 스트림 변환 : map(), flatMap()
+		map() 메소드는 해당 스트림의 요소들을 주어진 함수에 인수로 전달하여, 그 반환값들로 이루어진 새로운 스트림을 반환합니다.
+		flatMap(s -> Arrays.stream(s)); 우측에 있는 조건으로 2차원배열 -> 1차원 배열로 평탄화 한다.
+	3. 스트림 제한 : limit(), skip()
+		limit(3) 3개까지 제한
+		skip(3) 3번째까지 스킵
+	4. 스트림 정렬 : sorted()
+		오름차순 - sorted()
+		내림차순 - sorted(Comparator.reverseOrder())
+	5. 스트림 연산 결과 확인 : peek()
+
+
+	최종연산()
+	1. 요소의 출력 : forEach()
+	2. 요소의 소모 : reduce(초기값, 연산)
+	3. 요소의 검색 : findFirst(), findAny()
+	4. 요소의 검사 : anyMatch(), allMatch(), noneMatch()
+	5. 요소의 통계 : count(), min(), max()
+	6. 요소의 연산 : sum(), average()
+	7. 요소의 수집 : collect(), Collectors.toList()
+		1. 스트림을 배열이나 컬렉션으로 변환 : toArray(), toCollection(), toList(), toSet(), toMap()
+		2. 요소의 통계와 연산 메소드와 같은 동작을 수행 : counting(), maxBy(), minBy(), summingInt(), averagingInt() 등
+		3. 요소의 소모와 같은 동작을 수행 : reducing(), joining()
+		4. 요소의 그룹화와 분할 : groupingBy(), partitioningBy()
