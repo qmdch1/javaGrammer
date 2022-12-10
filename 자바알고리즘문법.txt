@@ -25,6 +25,7 @@ isLowerCase(char); 소문자 인지 확인
 trim(); 공백 제거
 
 Arrays
+	Arrays.asList(array); array를 list로 반환
 	Arrays.sort(array); 정렬
 
 List
@@ -32,7 +33,7 @@ List
 	add("");
 	set(int,""); int의 자리에 ""를 넣음, 뒤에 있는 데이터는 한자리씩 밀려남
 	clear(); 내용 전체삭제
-	toArray(); list to array
+	list.toArray(); list to array
 	iterator(); iterator 생성자
 		hasNext(); 다음 데이터 있는지 확인
 		next(); 다음 데이터 가져오기
@@ -44,4 +45,4 @@ List
 Collections
 	Collections.shuffle(list); list 셔플
 	Collections.swap(list, num1, num2); num1번째, num2번째 교환
-	
+	Collections.reverse(list); 배열 반대로 뒤집기

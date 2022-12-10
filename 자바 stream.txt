@@ -1,19 +1,29 @@
 Stream - 객체집합.스트림생성().중개연산().최종연산()
 
 예시
+list.stream().mapToInt(Integer::intValue).toArray(); // list to int[]
+List<Integer> list = Arrays.stream(numList).boxed().collect(Collectors.toList()); // int[] to list
+Arrays.stream(num_list).boxed().toArray(Integer[]::new); //int[] to Integer[]
 (int) Arrays.stream(String.valueOf(order).split("")).map(Integer::parseInt).filter(i -> i == 3 || i == 6 || i == 9).count();
 myString.chars().mapToObj(operand -> String.valueOf((char) (Character.isLowerCase(operand) ? Character.toUpperCase(operand) : Character.toLowerCase(operand)))).collect(Collectors.joining());
 Arrays.stream(myString.split("")).collect(Collectors.toList());
 Arrays.stream(numList).filter(value -> value % n == 0).toArray();
+Arrays.stream(numbers).map(i -> i*2).toArray();
 Arrays.stream(s1).collect(Collectors.toList());
 Arrays.stream(s.split(""))
-		.collect(Collectors.groupingBy(s1 -> s1))
-		.entrySet()
-		.stream()
-		.filter(entry -> entry.getValue().size() <= 1)
-		.map(Map.Entry::getKey)
-		.sorted()
-		.collect(Collectors.joining());
+	.collect(Collectors.groupingBy(s1 -> s1))
+	.entrySet()
+	.stream()
+	.filter(entry -> entry.getValue().size() <= 1)
+	.map(Map.Entry::getKey)
+	.sorted()
+	.collect(Collectors.joining());
+
+string.chars()
+	.mapToObj(Character::toString)
+	.distinct()
+	.collect(Collectors.joining());
+
 
 	orElse(0) 리턴값이 없는경우 0을리턴
 	mapToInt(i -> i); inputstream
@@ -33,7 +43,8 @@ Arrays.stream(s.split(""))
 		오름차순 - sorted()
 		내림차순 - sorted(Comparator.reverseOrder())
 	5. 스트림 연산 결과 확인 : peek()
-
+	6. integer to int : boxed()
+	mapToInt, mapToLong, mapToDouble, mapToObj
 
 	최종연산()
 	1. 요소의 출력 : forEach()
@@ -42,8 +53,9 @@ Arrays.stream(s.split(""))
 	4. 요소의 검사 : anyMatch(), allMatch(), noneMatch()
 	5. 요소의 통계 : count(), min(), max()
 	6. 요소의 연산 : sum(), average()
-	7. 요소의 수집 : collect(), Collectors.toList()
-		1. 스트림을 배열이나 컬렉션으로 변환 : toArray(), toCollection(), toList(), toSet(), toMap()
+	7. 요소의 수집 : collect()
+		reverse()
+		1. 스트림을 배열이나 컬렉션으로 변환 : toArray(), toCollection(), Collectors.toList(), toSet(), toMap()
 		2. 요소의 통계와 연산 메소드와 같은 동작을 수행 : counting(), maxBy(), minBy(), summingInt(), averagingInt() 등
 		3. 요소의 소모와 같은 동작을 수행 : reducing(), joining()
 		4. 요소의 그룹화와 분할 : groupingBy(), partitioningBy()
