@@ -26,6 +26,10 @@ Arrays.stream(s.split(""))
 
 
 int
+Arrays.stream(score).map(ints -> Arrays.stream(ints).average().orElse(0)).mapToInt(d -> Arrays.stream(score).map(ints -> Arrays.stream(ints).average().orElse(0)).sorted(Comparator.reverseOrder()).collect(Collectors.toList()).indexOf(d) + 1).toArray();
+Arrays.stream(int[]).map(i -> Arrays.stream(e).boxed().sorted(Comparator.reverseOrder()).collect(Collectors.toList()).indexOf(i) + 1).toArray();
+IntStream.rangeClosed(1, n).filter(i -> (int) IntStream.rangeClosed(1, i).filter(i2 -> i % i2 == 0).count() > 2).count();
+String.valueOf(age).chars().mapToObj(operand -> String.valueOf((char) (49 +operand))).collect(Collectors.joining());
 IntStream.rangeClosed(0, n).filter(value -> value % 2 == 1).toArray();
 IntStream.of((int) Arrays.stream(numList).filter(i -> i % 2 == 0).count(), (int) Arrays.stream(numList).filter(i -> i % 2 == 1).count()).toArray();
 Arrays.stream(numList).boxed().collect(Collectors.toList()); // int[] to list
@@ -37,29 +41,28 @@ Arrays.stream(s1).collect(Collectors.toList());
 List
 list.stream().mapToInt(Integer::intValue).toArray(); // list to int[]
 
-
 Character.toLowerCase(operand)))).collect(Collectors.joining());
 
-	orElse(0) 리턴값이 없는경우 0을리턴
+	orElse(0) //리턴값이 없는경우 0을리턴
 	mapToInt(i -> i); inputstream
-	s.chars(); 문자열로 수정하기
+	s.chars(); //문자열로 수정하기
 	
-	중개연산()
-	1. 스트림 필터링 : filter(), distinct() - 걸러내기, 중복제거
-		filter(s -> s.startsWith("c"));
-		filter("c"::equlas);
-	2. 스트림 변환 : map(), flatMap()
-		mapToInt, mapToLong, mapToDouble, mapToObj
-		map() 메소드는 해당 스트림의 요소들을 주어진 함수에 인수로 전달하여, 그 반환값들로 이루어진 새로운 스트림을 반환합니다.
-		flatMap(s -> Arrays.stream(s)); 우측에 있는 조건으로 2차원배열 -> 1차원 배열로 평탄화 한다.
-	3. 스트림 제한 : limit(), skip()
-		limit(3) 3개까지 제한
-		skip(3) 3번째까지 스킵
-	4. 스트림 정렬 : sorted()
-		오름차순 - sorted()
-		내림차순 - sorted(Comparator.reverseOrder())
-	5. 스트림 연산 결과 확인 : peek()
-	6. integer to int : boxed()
+	filter(s -> s.startsWith("c"));
+	filter("c"::equlas);
+	distinct() // 중복제거
+	
+	mapToInt, mapToLong, mapToDouble, mapToObj
+	map() 메소드는 해당 스트림의 요소들을 주어진 함수에 인수로 전달하여, 그 반환값들로 이루어진 새로운 스트림을 반환합니다.
+	flatMap(s -> Arrays.stream(s)); 우측에 있는 조건으로 2차원배열 -> 1차원 배열로 평탄화 한다.
+	
+	limit(3) // 3개까지 제한
+	skip(3) // 3번째까지 스킵
+	
+	sorted() // 오름차순
+	sorted(Comparator.reverseOrder()) // 내림차순
+
+	boxed() // Integer to int
+	peek() // 스트림 연산 결과 확인
 	
 	range(a, b) // a부터 b-1까지
 	rangeClosed(a, b) // a부터 b까지
