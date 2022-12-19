@@ -3,9 +3,12 @@ n 이하의 모든 합 == n(n+1) / 2
 rightShift(arr, num); // num만큼 arr배열 우측 이동
 leftShift(arr, num; // num만큼 arr 배열 좌측 이동
 
-Integer.parseInt(String); //String to int
-Integer.valueOf(String); //String to int
-Integer.toString(int); //int to String
+Integer.parseInt(String); // String to int
+Integer.parseInt(String, 2); // String to 2진수
+Integer.toBinaryString(2진수); // 2진수 to String
+Integer.valueOf(String); // String to int
+Integer.toString(int); // int to String
+
 
 s.charAt(string(index)); 문자열중에 글자하나를 가져올때 사용하는방법
 s.toCharArray(); 문자열을 Char배열로 바꾸는방법
@@ -47,6 +50,7 @@ List
 	clear(); 내용 전체삭제
 	list.toArray(); list to array
 	iterator(); iterator 생성자
+		Iterator<T> it = list.iterator();
 		hasNext(); 다음 데이터 있는지 확인
 		next(); 다음 데이터 가져오기
 	list.sort(Comparator.naturalOrder()); 오름차순 정렬

@@ -27,3 +27,15 @@ StringBuffer
 	
 StringBuilder
 	동기화를 지원하지 않기 때문에 멀티쓰레드 환경에서 사용하는 것은 적합하지 않지만, 단일쓰레드에서의 성능은 StringBuffer보다 더 좋다.
+	
+HTTP 통신
+	Stream : 데이터가 연속적으로 존재한다는 것을 표현한 객체, byte로 데이터가 전달된다.
+	InputStream : byte의 int형의 아스키코드로 값을 저장한다.
+		InputStream in = System.in;
+	InputStreamReader : byte대신 char형태로 읽을수 있다. 따라서 아스키코드가 아닌 문자열로 출력이 가능하며 String객체로 변환도 된다.
+		InputStreamReader reader = new InputStreamReader(InputStream);
+	BufferdReader : Stream이 한계치라 null이 반환되기 전까지 모든 값을 저장함
+		BufferdReader r = new BufferdReader(InputStreamReader);
+		
+	
+		

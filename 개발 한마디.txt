@@ -1,0 +1,3 @@
+Read only query부분은 네이티브 SQL쓰는게 가장 좋다. JPA 떡발하면 서버야 죽지마! 소리가 나옴
+pk autoincrement보다 UUID를 써라
+안느님은 JPA, jooq 조합으로 쓴다. Querydsl = jpql / jooq = native sql
