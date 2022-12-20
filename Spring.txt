@@ -3,6 +3,11 @@ Assert.notEmpty(user, "사용자 정보가 없습니다.");
 Assert.isTrue(user.getId() > 0);
 Assert.isTrue(user.getId() > 0, "사용자 정보가 존재하지 않습니다.", UserNotFoundException.class);
 
+- Optional 자료형
+	: 예상치 못한 Null 관련 예외를 회피할 수 있다. 
+	> 생성 : of(), ofNullable(value), empty() 메소드를 사용하여 Optional 객체를 생성한다. 
+	> 접근 : get(), orElse(T other), orElseGet()
+
 @RestController는 @Controller + @ResponseBody
 @Data 어노테이션은 @Getter, @Setter, @RequiredArgsConstructor, @ToString, @EqualsAndHashCode를 한꺼번에 설정해준다
 DTO(Data Transfer Object)의 핵심 관심사는 이름 그대로 데이터의 전달
@@ -10,6 +15,7 @@ Entity는 핵심 비지니스 로직을 담는 비지니스 도메인의 영역�
 @NoArgsConstructor 어노테이션은 파라미터가 없는 기본 생성자를 생성해주고
 @AllArgsConstructor 어노테이션은 모든 필드 값을 파라미터로 받는 생성자를 만들어줍니다
 @RequiredArgsConstructor 어노테이션은 final이나 @NonNull인 필드 값만 파라미터로 받는 생성자를 만들어줍니다.
+@EqualsAndHashCode 인스턴스를 비교할때 사용하는 hashcode()를 생성 해주며 이는 주소값이 아니라 내부값을 비교하기 때문에 값이 동일하면 True반환
 
 build.gradle
 	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
