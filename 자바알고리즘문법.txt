@@ -18,7 +18,9 @@ Character
 	isDigit; // 숫자인지 확인
 
 int
+	a.compareTo(b); // a가 b보다 크면 1, 같으면 0, 작으면 -1
 	(char)int // 10진수 to 아스키코드 문자
+	Integer.compare(a, b); // a가 b보다 크면 1, 같으면 0, 작으면 -1
 	Integer.parseInt(String); //String to int
 	Integer.parseInt(String, 2); // String to 2진수
 	Integer.toBinaryString(2진수); // 2진수 to String
@@ -48,8 +50,12 @@ Arrays
 	Arrays.asList(array); // array를 list로 반환
 	Arrays.sort(array); // 정렬
 	Arrays.copyOfRange(numbers, num1, num2 + 1); numbers Array의 num1부터 시작해서 num2까지 반환
+	Arrays.toString(array); // array 데이터 전체 출력
 	
 List
+	list.size(); // 원소의 개수
+	list.remove(); // 값 제거
+	list.removeAll(); // 값 전체 제거
 	list.contains("") 문자열중에 해당글자가 있는지 확인
 	list.indexOf(string); // string 문자열이 있는 위치 반환
 	add("");

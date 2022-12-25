@@ -1,5 +1,3 @@
-https://github.com/qmdch1/javaGrammer.git
-
 list
 	ArrayList - index접근 검색빠름, 중간에 있는 데이터 삽입과 삭제가 많다면 비효율적
 	LinkedList - 순차적접근 검색느림, 중간에 있는 데이터 삽입과 삭제가 많으면 효율적
