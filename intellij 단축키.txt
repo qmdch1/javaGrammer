@@ -1,0 +1,36 @@
+	psvm
+		public static void main(String[] args)
+	soutv
+		System.out.println 자동생성
+	
+	리눅스 옵션 = 윈도우 alt
+	리눅스 커맨드 = 윈도우 Ctrl
+		
+	이동관련
+		Ctrl + E
+			최근 열었던 파일 목록 출력
+		Ctrl + B
+			해당 클래스 파일로 이동
+		Ctrl + /
+			해당 구역을 주석 처리
+		
+		 
+	추출, 생성 단축키
+	
+		Ctrl + Alt + V
+			변수 추출하는 단축키 (오피셔녈화 자주 사용)
+		Ctrl + Alt + M
+			메서드 추출하는 키
+		Alt + insert
+			겟터셋터 등의 오버라이드 메서드 자동 생성
+		Alt + Enter
+	  
+		
+	항목 조회
+		Ctrl+Alt+Shift+T
+			리팩토링 관련 전체 항목 조회
+				Refactor this
+			
+	빌드관련
+		Shift + F10
+			이전에 실행했던 빌드 다시 실행
