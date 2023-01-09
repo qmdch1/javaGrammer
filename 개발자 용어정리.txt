@@ -3,3 +3,6 @@ APM - 어플리케이션 성능 관리
 
 SSR - Server side Rendering 서버에서 다 렌더링후 출력 (화면 깜빡이 생김)
 CSR - Client side Rendering 클라이언트에서 데이터를 받은후 해당 데이터만 수정
+
+CI - 개발자를 위한 자동화 프로세스인 지속적인 통합
+CD - 지속적인 서비스 제공, 지속적인 배포

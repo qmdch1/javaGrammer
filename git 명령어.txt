@@ -1,3 +1,16 @@
+생성
+	git init
+	git add .
+
+커밋
+	git commit -m ""
+
+HEAD로 리셋하기
+	git reset HEAD^
+	git commit -m ""
+	
+origin connect
+	git remote add origin [저장소 URL]
 origin
 	git fetch origin <branchName> == 원격 branch 패치
 	git push origin <branchName> == 원격 branch push
