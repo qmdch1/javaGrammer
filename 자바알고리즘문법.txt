@@ -75,7 +75,7 @@ Collections
 	Collections.shuffle(list); list 셔플
 	Collections.swap(list, num1, num2); num1번째, num2번째 교환
 	Collections.reverse(list); 배열 반대로 뒤집기
-	
+	Collections.frequency(list, n); // 리스트에 중복값이 몇개인지 확인
 	
 StringBuffer, StringBuilder
 	sb.append(""); // 요소 추가
