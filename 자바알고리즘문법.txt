@@ -30,6 +30,7 @@ int
 	Integer.toHexString(int) // int to 16진수
 
 String
+	String.toCharArray();
 	String.equals(string); // string이랑 똑같은지 확인
 	String.contains(string); // string이 포함되어 있는지 확인
 	String.trim(); 공백 제거
@@ -89,3 +90,4 @@ Math
 	Math.abs(n); // n의 절대값
 	Math.min(n, n2); // 작은수 반환
 	Math.max(n, n2); // 큰수 반환
+	
