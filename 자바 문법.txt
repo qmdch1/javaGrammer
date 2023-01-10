@@ -1,13 +1,13 @@
-list
+list - 일반적인 리스트 인터페이스
 	ArrayList - index접근 검색빠름, 중간에 있는 데이터 삽입과 삭제가 많다면 비효율적
 	LinkedList - 순차적접근 검색느림, 중간에 있는 데이터 삽입과 삭제가 많으면 효율적
 
-Set 
+Set - list형과 비슷하나, 중복값은 들어가지 않음
 	HashSet - 특별한 사유가 없다면 검색 성능이 좋은 HashSet을 사용
 	LinkedHashSet - 순서를 보장하고 싶다면 LinkedHashSet을 사용
 	TreeSet - 키값을 일정하게 iterate 하고자한다면 TreeSet을 사용
 	
-Map
+Map - key, value로 들어가는 자료형
 	HashMap - 특별한 사유가 없다면 검색 성능이 좋은 HashMap을 사용
 	LinkedHashMap - 순서를 보장하고 싶다면 LinkedHashMap을 사용
 	TreeMap - 키값을 일정하게 iterate 하고자한다면 TreeMap을 사용
